@@ -11,7 +11,6 @@ public class CustomPriceSerializer extends JsonSerializer<Float> {
     @Override
     public void serialize(Float value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonGenerationException {
         if (null == value) {
-            //write the word 'null' if there's no value available
             jgen.writeNull();
         } else {
             jgen.writeNumber(String.format("%.2f", value));
